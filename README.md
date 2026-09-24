@@ -1,6 +1,6 @@
 # AstroDiffraction — PixInsight 发布仓库 / Release Repository
 
-© Fluorine Zhu 2026 · [源代码 / Source code](https://github.com/Fluorine7/AstroDiffraction-PixInsight)
+© Fluorine Zhu 2026
 
 ## 中文
 

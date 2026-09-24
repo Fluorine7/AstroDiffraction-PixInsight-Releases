@@ -5,7 +5,6 @@
          <b>AstroDiffraction for PixInsight</b>
       </p>
       <p>Native diffraction-spike Process by Fluorine Zhu.</p>
-      <p>Source: https://github.com/Fluorine7/AstroDiffraction-PixInsight</p>
    </description>
    <platform os="macosx" arch="arm64" version="1.9.5:1.9.5">
       <package fileName="AstroDiffraction-1.0.0.0015-macos-arm64.zip" sha1="9aa3eb6a3acf7426d589a174302e20082a901b51" type="module" releaseDate="20260924112600">
@@ -26,4 +25,4 @@
       </package>
    </platform>
 </xri>
-<Signature developerId="Fluorine7" timestamp="2026-09-24T11:28:34.753Z" encoding="Base64">v2YNvNvuXr/z16z8tbWOOj5jOrYdgfAay/17JTxhHhhDB5/wISmDJ8IJIGIkDl5LUMVukIssVSh8aQR6SxhECQ==</Signature>
+<Signature developerId="Fluorine7" timestamp="2026-09-24T11:36:33.647Z" encoding="Base64">f69gEp2mbXsZMr+P7ZlyNXzgmTA3Dr1j39bX6d7I5Z5BIhEtmyVaXtvU+hL8uIa8RC6cVVm6b0MJ3UzsKzo1AA==</Signature>
