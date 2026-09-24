@@ -8,13 +8,22 @@
       <p>Source: https://github.com/Fluorine7/AstroDiffraction-PixInsight</p>
    </description>
    <platform os="macosx" arch="arm64" version="1.9.5:1.9.5">
-      <package fileName="AstroDiffraction-1.0.0.0015-stf-preview-macos-arm64.zip" sha1="9aa3eb6a3acf7426d589a174302e20082a901b51" type="module" releaseDate="20260924111522">
-         <title>AstroDiffraction V1.0 STF preview update (macOS Apple Silicon)</title>
+      <package fileName="AstroDiffraction-1.0.0.0015-macos-arm64.zip" sha1="9aa3eb6a3acf7426d589a174302e20082a901b51" type="module" releaseDate="20260924112600">
+         <title>AstroDiffraction V1.0 (macOS Apple Silicon)</title>
          <description>
             <p>Native PCL C++ Process for generating diffraction spikes. Requires PixInsight 1.9.5 and macOS 14 or later.</p>
-            <p>STF preview now auto-stretches images without an active view STF. Installed under Process &gt; Convolution &gt; AstroDiffraction.</p>
+            <p>Installed under Process &gt; Convolution &gt; AstroDiffraction.</p>
+         </description>
+      </package>
+   </platform>
+   <platform os="windows" arch="x64" version="1.9.5:1.9.5">
+      <package fileName="AstroDiffraction-1.0.0.0015-windows-x64.zip" sha1="38a2f4f778fdb05fb0c3ef05db787017ab4ad991" type="module" releaseDate="20260924112600">
+         <title>AstroDiffraction V1.0 (Windows x64)</title>
+         <description>
+            <p>Native PCL C++ Process for generating diffraction spikes. Requires PixInsight 1.9.5 on Windows x64.</p>
+            <p>Installed under Process &gt; Convolution &gt; AstroDiffraction.</p>
          </description>
       </package>
    </platform>
 </xri>
-<Signature developerId="Fluorine7" timestamp="2026-09-24T11:16:27.758Z" encoding="Base64">7jNhn/5XhEIqNfz16bCbH6mQiEkPyyY9WUbzBmxl5b270xjzW+KQ6iVzm8GBzOb8pPFeeD1R6LHajN2tD0xnDw==</Signature>
+<Signature developerId="Fluorine7" timestamp="2026-09-24T11:28:34.753Z" encoding="Base64">v2YNvNvuXr/z16z8tbWOOj5jOrYdgfAay/17JTxhHhhDB5/wISmDJ8IJIGIkDl5LUMVukIssVSh8aQR6SxhECQ==</Signature>

@@ -1,17 +1,45 @@
-# AstroDiffraction PixInsight Releases
+# AstroDiffraction — PixInsight 发布仓库 / Release Repository
 
-Binary update repository for [AstroDiffraction](https://github.com/Fluorine7/AstroDiffraction-PixInsight).
-Source code and issues remain in the source repository. © Fluorine Zhu 2026.
+© Fluorine Zhu 2026 · [源代码 / Source code](https://github.com/Fluorine7/AstroDiffraction-PixInsight)
 
-## Install in PixInsight
+## 中文
 
-1. Use PixInsight 1.9.5 on macOS 14+ with Apple Silicon.
-2. Open **Resources > Updates > Manage Repositories**.
-3. Add this repository URL (including the trailing slash):
+这里提供 AstroDiffraction 原生 PixInsight Process 的已签名安装包。当前版本为 V1.0（模块内部版本 `1.0.0.0015`），适用于 PixInsight 1.9.5：
+
+| 平台 | 安装包 |
+| --- | --- |
+| macOS 14 及以上，Apple Silicon | [下载 macOS 版](AstroDiffraction-1.0.0.0015-macos-arm64.zip) |
+| Windows x64 | [下载 Windows 版](AstroDiffraction-1.0.0.0015-windows-x64.zip) |
+
+推荐在 PixInsight 中通过更新仓库安装：
+
+1. 打开 **Resources → Updates → Manage Repositories**。
+2. 添加以下地址，保留末尾的 `/`：
 
    `https://raw.githubusercontent.com/Fluorine7/AstroDiffraction-PixInsight-Releases/main/`
 
-4. Run **Resources > Updates > Check for Updates**, apply the update, and restart PixInsight.
-5. Open **Process > Convolution > AstroDiffraction**.
+3. 运行 **Resources → Updates → Check for Updates**，安装更新并重启 PixInsight。
+4. 在 **Process → Convolution → AstroDiffraction** 中打开。
 
-The update archive contains the `Fluorine7` CPD-signed module and its matching PixInsight `.xsgn` signature. Windows, Linux, and Intel Mac builds are not yet available. Never download a module from an untrusted source or separate it from its matching signature.
+每个安装包都包含模块二进制文件和与其匹配的 Fluorine7 开发者签名 `.xsgn`；仓库索引 `updates.xri` 也已签名。请勿将模块与签名文件分开使用。目前没有 Linux 或 Intel Mac 安装包。
+
+## English
+
+This repository distributes signed binaries of the native AstroDiffraction PixInsight Process. The current release is V1.0 (internal module version `1.0.0.0015`) for PixInsight 1.9.5:
+
+| Platform | Package |
+| --- | --- |
+| macOS 14 or later, Apple Silicon | [Download for macOS](AstroDiffraction-1.0.0.0015-macos-arm64.zip) |
+| Windows x64 | [Download for Windows](AstroDiffraction-1.0.0.0015-windows-x64.zip) |
+
+The recommended installation method is the PixInsight update repository:
+
+1. Open **Resources → Updates → Manage Repositories**.
+2. Add the following URL, including the trailing `/`:
+
+   `https://raw.githubusercontent.com/Fluorine7/AstroDiffraction-PixInsight-Releases/main/`
+
+3. Run **Resources → Updates → Check for Updates**, install the update, and restart PixInsight.
+4. Open **Process → Convolution → AstroDiffraction**.
+
+Each package contains the module binary and its matching Fluorine7 developer signature (`.xsgn`). The `updates.xri` repository index is also signed. Keep each module and signature together. Linux and Intel Mac packages are not available yet.
