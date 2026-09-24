@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xri version="1.0">
+   <description>
+      <p>
+         <b>AstroDiffraction for PixInsight</b>
+      </p>
+      <p>Native diffraction-spike Process by Fluorine Zhu.</p>
+      <p>Source: https://github.com/Fluorine7/AstroDiffraction-PixInsight</p>
+   </description>
+   <platform os="macosx" arch="arm64" version="1.9.5:1.9.5">
+      <package fileName="AstroDiffraction-1.0.0.0015-macos-arm64.zip" sha1="862fec50484eacb2b17e08c4c67a9df6ea4df779" type="module" releaseDate="20260924092453">
+         <title>AstroDiffraction V1.0 (macOS Apple Silicon)</title>
+         <description>
+            <p>Native PCL C++ Process for generating diffraction spikes. Requires PixInsight 1.9.5 and macOS 14 or later.</p>
+            <p>Installed under Process &gt; Convolution &gt; AstroDiffraction.</p>
+         </description>
+      </package>
+   </platform>
+</xri>
+<Signature developerId="Fluorine7" timestamp="2026-09-24T09:25:32.011Z" encoding="Base64">36dyueqHFlmmZ4IcGToP+yO/h+LTF5RPFfN6WATfRirh1mMoVfAzanQFeCdvkgaG44t81zbdstzAtUyA+EAjAw==</Signature>
