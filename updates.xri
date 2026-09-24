@@ -8,13 +8,13 @@
       <p>Source: https://github.com/Fluorine7/AstroDiffraction-PixInsight</p>
    </description>
    <platform os="macosx" arch="arm64" version="1.9.5:1.9.5">
-      <package fileName="AstroDiffraction-1.0.0.0015-macos-arm64.zip" sha1="862fec50484eacb2b17e08c4c67a9df6ea4df779" type="module" releaseDate="20260924092453">
-         <title>AstroDiffraction V1.0 (macOS Apple Silicon)</title>
+      <package fileName="AstroDiffraction-1.0.0.0015-stf-preview-macos-arm64.zip" sha1="9aa3eb6a3acf7426d589a174302e20082a901b51" type="module" releaseDate="20260924111522">
+         <title>AstroDiffraction V1.0 STF preview update (macOS Apple Silicon)</title>
          <description>
             <p>Native PCL C++ Process for generating diffraction spikes. Requires PixInsight 1.9.5 and macOS 14 or later.</p>
-            <p>Installed under Process &gt; Convolution &gt; AstroDiffraction.</p>
+            <p>STF preview now auto-stretches images without an active view STF. Installed under Process &gt; Convolution &gt; AstroDiffraction.</p>
          </description>
       </package>
    </platform>
 </xri>
-<Signature developerId="Fluorine7" timestamp="2026-09-24T09:25:32.011Z" encoding="Base64">36dyueqHFlmmZ4IcGToP+yO/h+LTF5RPFfN6WATfRirh1mMoVfAzanQFeCdvkgaG44t81zbdstzAtUyA+EAjAw==</Signature>
+<Signature developerId="Fluorine7" timestamp="2026-09-24T11:16:27.758Z" encoding="Base64">7jNhn/5XhEIqNfz16bCbH6mQiEkPyyY9WUbzBmxl5b270xjzW+KQ6iVzm8GBzOb8pPFeeD1R6LHajN2tD0xnDw==</Signature>
