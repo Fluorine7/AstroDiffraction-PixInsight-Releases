@@ -7,22 +7,22 @@
       <p>Native diffraction-spike Process by Fluorine Zhu.</p>
    </description>
    <platform os="macosx" arch="arm64" version="1.9.5:1.9.5">
-      <package fileName="AstroDiffraction-1.1.0.0016-macos-arm64.zip" sha1="85a703de571957fb3bf8e2482c3d069c76600cc4" type="module" releaseDate="20260925052814">
-         <title>AstroDiffraction V1.1 (macOS Apple Silicon)</title>
+      <package fileName="AstroDiffraction-1.2.0.0017-macos-arm64.zip" sha1="b3feb055ce6f7d9b45c9ca8fe017a75fcd4f8b06" type="module" releaseDate="20260925163841">
+         <title>AstroDiffraction V1.2 (macOS Apple Silicon)</title>
          <description>
-            <p>Native PCL C++ Process for generating diffraction spikes. V1.1 improves original/result previews and in-place undo. Requires PixInsight 1.9.5 and macOS 14 or later.</p>
+            <p>Native PCL C++ Process for generating diffraction spikes. V1.2 improves bright-star detection and spike-wing visibility over bright nebulosity. Requires PixInsight 1.9.5 and macOS 14 or later.</p>
             <p>Installed under Process &gt; Convolution &gt; AstroDiffraction.</p>
          </description>
       </package>
    </platform>
    <platform os="windows" arch="x64" version="1.9.5:1.9.5">
-      <package fileName="AstroDiffraction-1.1.0.0016-windows-x64.zip" sha1="0e56ece92fe1d2bb7baf8eba6800faafa3fb062d" type="module" releaseDate="20260925052814">
-         <title>AstroDiffraction V1.1 (Windows x64)</title>
+      <package fileName="AstroDiffraction-1.2.0.0017-windows-x64.zip" sha1="0edb4cf9fd1a0b5a419e3e462ac55d4c9094a703" type="module" releaseDate="20260925163841">
+         <title>AstroDiffraction V1.2 (Windows x64)</title>
          <description>
-            <p>Native PCL C++ Process for generating diffraction spikes. V1.1 improves original/result previews and in-place undo. Requires PixInsight 1.9.5 on Windows x64.</p>
+            <p>Native PCL C++ Process for generating diffraction spikes. V1.2 improves bright-star detection and spike-wing visibility over bright nebulosity. Requires PixInsight 1.9.5 on Windows x64.</p>
             <p>Installed under Process &gt; Convolution &gt; AstroDiffraction.</p>
          </description>
       </package>
    </platform>
 </xri>
-<Signature developerId="Fluorine7" timestamp="2026-09-25T05:30:08.586Z" encoding="Base64">lKkd4NdIS0EE+NOmsKUsRUdqlq89GYTEySe/z9qYZ3JeDKF7U6E8jUCPEeWNOPdoQghhS09Gc4PtBLA06LfgBg==</Signature>
+<Signature developerId="Fluorine7" timestamp="2026-09-25T16:40:17.310Z" encoding="Base64">JI4G4O0uHPlTtwMHMuqbpo0sS00PEtVlhnzNj8O4SUngUDpCZhSCvSQMAqWcRz7pyCUjdFF0kqrldGFnZKw6Cw==</Signature>

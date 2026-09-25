@@ -4,12 +4,12 @@
 
 ## 中文
 
-这里提供 AstroDiffraction 原生 PixInsight Process 的已签名安装包。当前版本为 V1.1（模块内部版本 `1.1.0.0016`），适用于 PixInsight 1.9.5。V1.1 改进了 Process 内的原图／结果预览，以及原位生成后的撤回操作。
+这里提供 AstroDiffraction 原生 PixInsight Process 的已签名安装包。当前版本为 V1.2（模块内部版本 `1.2.0.0017`），适用于 PixInsight 1.9.5。V1.2 改进了亮星核心的检测，并减少明亮星云对星芒外翼可见性估计的干扰。
 
 | 平台 | 安装包 |
 | --- | --- |
-| macOS 14 及以上，Apple Silicon | [下载 macOS 版](AstroDiffraction-1.1.0.0016-macos-arm64.zip) |
-| Windows x64 | [下载 Windows 版](AstroDiffraction-1.1.0.0016-windows-x64.zip) |
+| macOS 14 及以上，Apple Silicon | [下载 macOS 版](AstroDiffraction-1.2.0.0017-macos-arm64.zip) |
+| Windows x64 | [下载 Windows 版](AstroDiffraction-1.2.0.0017-windows-x64.zip) |
 
 推荐在 PixInsight 中通过更新仓库安装：
 
@@ -25,12 +25,12 @@
 
 ## English
 
-This repository distributes signed binaries of the native AstroDiffraction PixInsight Process. The current release is V1.1 (internal module version `1.1.0.0016`) for PixInsight 1.9.5. V1.1 improves the in-process original/result previews and undo after applying to the source view.
+This repository distributes signed binaries of the native AstroDiffraction PixInsight Process. The current release is V1.2 (internal module version `1.2.0.0017`) for PixInsight 1.9.5. V1.2 improves detection of bright stellar cores and reduces the influence of bright nebulosity on spike-wing visibility estimates.
 
 | Platform | Package |
 | --- | --- |
-| macOS 14 or later, Apple Silicon | [Download for macOS](AstroDiffraction-1.1.0.0016-macos-arm64.zip) |
-| Windows x64 | [Download for Windows](AstroDiffraction-1.1.0.0016-windows-x64.zip) |
+| macOS 14 or later, Apple Silicon | [Download for macOS](AstroDiffraction-1.2.0.0017-macos-arm64.zip) |
+| Windows x64 | [Download for Windows](AstroDiffraction-1.2.0.0017-windows-x64.zip) |
 
 The recommended installation method is the PixInsight update repository:
 
