@@ -7,22 +7,22 @@
       <p>Native diffraction-spike Process by Fluorine Zhu.</p>
    </description>
    <platform os="macosx" arch="arm64" version="1.9.5:1.9.5">
-      <package fileName="AstroDiffraction-1.0.0.0015-macos-arm64.zip" sha1="9aa3eb6a3acf7426d589a174302e20082a901b51" type="module" releaseDate="20260924112600">
-         <title>AstroDiffraction V1.0 (macOS Apple Silicon)</title>
+      <package fileName="AstroDiffraction-1.1.0.0016-macos-arm64.zip" sha1="85a703de571957fb3bf8e2482c3d069c76600cc4" type="module" releaseDate="20260925052814">
+         <title>AstroDiffraction V1.1 (macOS Apple Silicon)</title>
          <description>
-            <p>Native PCL C++ Process for generating diffraction spikes. Requires PixInsight 1.9.5 and macOS 14 or later.</p>
+            <p>Native PCL C++ Process for generating diffraction spikes. V1.1 improves original/result previews and in-place undo. Requires PixInsight 1.9.5 and macOS 14 or later.</p>
             <p>Installed under Process &gt; Convolution &gt; AstroDiffraction.</p>
          </description>
       </package>
    </platform>
    <platform os="windows" arch="x64" version="1.9.5:1.9.5">
-      <package fileName="AstroDiffraction-1.0.0.0015-windows-x64.zip" sha1="38a2f4f778fdb05fb0c3ef05db787017ab4ad991" type="module" releaseDate="20260924112600">
-         <title>AstroDiffraction V1.0 (Windows x64)</title>
+      <package fileName="AstroDiffraction-1.1.0.0016-windows-x64.zip" sha1="0e56ece92fe1d2bb7baf8eba6800faafa3fb062d" type="module" releaseDate="20260925052814">
+         <title>AstroDiffraction V1.1 (Windows x64)</title>
          <description>
-            <p>Native PCL C++ Process for generating diffraction spikes. Requires PixInsight 1.9.5 on Windows x64.</p>
+            <p>Native PCL C++ Process for generating diffraction spikes. V1.1 improves original/result previews and in-place undo. Requires PixInsight 1.9.5 on Windows x64.</p>
             <p>Installed under Process &gt; Convolution &gt; AstroDiffraction.</p>
          </description>
       </package>
    </platform>
 </xri>
-<Signature developerId="Fluorine7" timestamp="2026-09-24T11:36:33.647Z" encoding="Base64">f69gEp2mbXsZMr+P7ZlyNXzgmTA3Dr1j39bX6d7I5Z5BIhEtmyVaXtvU+hL8uIa8RC6cVVm6b0MJ3UzsKzo1AA==</Signature>
+<Signature developerId="Fluorine7" timestamp="2026-09-25T05:30:08.586Z" encoding="Base64">lKkd4NdIS0EE+NOmsKUsRUdqlq89GYTEySe/z9qYZ3JeDKF7U6E8jUCPEeWNOPdoQghhS09Gc4PtBLA06LfgBg==</Signature>
