@@ -7,22 +7,22 @@
       <p>Native diffraction-spike Process by Fluorine Zhu.</p>
    </description>
    <platform os="macosx" arch="arm64" version="1.9.5:1.9.5">
-      <package fileName="AstroDiffraction-1.2.0.0017-macos-arm64.zip" sha1="b3feb055ce6f7d9b45c9ca8fe017a75fcd4f8b06" type="module" releaseDate="20260925163841">
-         <title>AstroDiffraction V1.2 (macOS Apple Silicon)</title>
+      <package fileName="AstroDiffraction-1.3.0.0018-macos-arm64.zip" sha1="cccd67738597d448e53662d50dc60fd3eb044e4d" type="module" releaseDate="20260926141823">
+         <title>AstroDiffraction V1.3 (macOS Apple Silicon)</title>
          <description>
-            <p>Native PCL C++ Process for generating diffraction spikes. V1.2 improves bright-star detection and spike-wing visibility over bright nebulosity. Requires PixInsight 1.9.5 and macOS 14 or later.</p>
+            <p>Native PCL C++ Process for generating diffraction spikes. V1.3 improves manual-star brightness, very bright stars, and core sharpness with broader spikes. Requires PixInsight 1.9.5 and macOS 14 or later.</p>
             <p>Installed under Process &gt; Convolution &gt; AstroDiffraction.</p>
          </description>
       </package>
    </platform>
    <platform os="windows" arch="x64" version="1.9.5:1.9.5">
-      <package fileName="AstroDiffraction-1.2.0.0017-windows-x64.zip" sha1="0edb4cf9fd1a0b5a419e3e462ac55d4c9094a703" type="module" releaseDate="20260925163841">
-         <title>AstroDiffraction V1.2 (Windows x64)</title>
+      <package fileName="AstroDiffraction-1.3.0.0018-windows-x64.zip" sha1="16413762cee5643587b4b402ad1538467c3ff068" type="module" releaseDate="20260926141823">
+         <title>AstroDiffraction V1.3 (Windows x64)</title>
          <description>
-            <p>Native PCL C++ Process for generating diffraction spikes. V1.2 improves bright-star detection and spike-wing visibility over bright nebulosity. Requires PixInsight 1.9.5 on Windows x64.</p>
+            <p>Native PCL C++ Process for generating diffraction spikes. V1.3 improves manual-star brightness, very bright stars, and core sharpness with broader spikes. Requires PixInsight 1.9.5 on Windows x64.</p>
             <p>Installed under Process &gt; Convolution &gt; AstroDiffraction.</p>
          </description>
       </package>
    </platform>
 </xri>
-<Signature developerId="Fluorine7" timestamp="2026-09-25T16:40:17.310Z" encoding="Base64">JI4G4O0uHPlTtwMHMuqbpo0sS00PEtVlhnzNj8O4SUngUDpCZhSCvSQMAqWcRz7pyCUjdFF0kqrldGFnZKw6Cw==</Signature>
+<Signature developerId="Fluorine7" timestamp="2026-09-26T14:23:53.898Z" encoding="Base64">acPvJAn1RlUbrZY3D2vdvwwa3rDjZkQaNHvZWeiFP8iX1ulDw6EXLSB14a7NPH6Pmnkkx+37GVVf/VLyM3NGCA==</Signature>
