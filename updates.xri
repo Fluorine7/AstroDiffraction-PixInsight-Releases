@@ -7,22 +7,22 @@
       <p>Native diffraction-spike Process by Fluorine Zhu.</p>
    </description>
    <platform os="macosx" arch="arm64" version="1.9.5:1.9.5">
-      <package fileName="AstroDiffraction-1.5.2.0001-macos-arm64.zip" sha1="298fc4941933a871434cedacb1fa5f3cfa39b92d" type="module" releaseDate="20260928163747">
-         <title>AstroDiffraction V1.5.2 (macOS Apple Silicon)</title>
+      <package fileName="AstroDiffraction-1.5.3.0001-macos-arm64.zip" sha1="10d2d6f4081a0f6d866810a7992dcb2ec908f56c" type="module" releaseDate="20260928170737">
+         <title>AstroDiffraction V1.5.3 (macOS Apple Silicon)</title>
          <description>
-            <p>Native PCL Process with catalog-assisted and image-only star detection, improved sharp-star spike visibility, JWST reticle optical preset, and reduced peak memory use. Requires PixInsight 1.9.5 and macOS 14 or later.</p>
+            <p>Native PCL Process. V1.5.3 installs a preset pack next to the module, adds automatic loading of supplied JWST and Quattro optics presets, and preserves user presets in the system user-data directory. Requires PixInsight 1.9.5 and macOS 14 or later.</p>
             <p>Installed under Process &gt; Convolution &gt; AstroDiffraction.</p>
          </description>
       </package>
    </platform>
    <platform os="windows" arch="x64" version="1.9.5:1.9.5">
-      <package fileName="AstroDiffraction-1.5.2.0001-windows-x64.zip" sha1="3ed9c6682a94d6c6b504f83e0f1aa3143baf90a4" type="module" releaseDate="20260928163747">
-         <title>AstroDiffraction V1.5.2 (Windows x64)</title>
+      <package fileName="AstroDiffraction-1.5.3.0001-windows-x64.zip" sha1="3be3f3198c432a3c72738d9875765200a103fc99" type="module" releaseDate="20260928170737">
+         <title>AstroDiffraction V1.5.3 (Windows x64)</title>
          <description>
-            <p>Native PCL Process with catalog-assisted and image-only star detection, improved sharp-star spike visibility, JWST reticle optical preset, and reduced peak memory use. Requires PixInsight 1.9.5 on Windows x64.</p>
+            <p>Native PCL Process. V1.5.3 installs a preset pack next to the module, adds automatic loading of supplied JWST and Quattro optics presets, and preserves user presets in the system user-data directory. Requires PixInsight 1.9.5 on Windows x64.</p>
             <p>Installed under Process &gt; Convolution &gt; AstroDiffraction.</p>
          </description>
       </package>
    </platform>
 </xri>
-<Signature developerId="Fluorine7" timestamp="2026-09-28T16:38:30.018Z" encoding="Base64">g/X8MCIAzrW2ZBO33rtIPjbAYFkOklOO7MTlYVpFFuNekjCeCmAl9CJyudExCMOO/a3w5dWS4pLZ/fLqkrqiDg==</Signature>
+<Signature developerId="Fluorine7" timestamp="2026-09-28T17:08:12.317Z" encoding="Base64">mSmxXXI6tjq2BmvRzltwnr/uwR7PGHePm2UL0JvYniyWD26PAsbMx/lU7h5FgeC8oJf6IFBlQoIt9xWVcCjNAg==</Signature>
