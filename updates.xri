@@ -7,10 +7,10 @@
       <p>Native diffraction-spike Process by Fluorine Zhu.</p>
    </description>
    <platform os="macosx" arch="arm64" version="1.9.5:1.9.5">
-      <package fileName="AstroDiffraction-1.6.3.0001-macos-arm64.zip" sha1="75d2ae51d03dc0002f2da7ac50c14556134b67f6" type="module" releaseDate="20261019091241">
-         <title>AstroDiffraction V1.6.3 (macOS Apple Silicon)</title>
+      <package fileName="AstroDiffraction-1.6.4.0001-macos-arm64.zip" sha1="54cbda6e8b4c8cfa7677fee5bc8fd3407e044ed2" type="module" releaseDate="20261019100122">
+         <title>AstroDiffraction V1.6.4 (macOS Apple Silicon)</title>
          <description>
-            <p>Native PCL Process. V1.6.3 removes the fixed 100-million-pixel execution limit and prevents dark bright-core display artifacts by limiting output samples to 0-1. Includes star-table centering at 100% zoom, updated editing controls and tooltips, and bundled JWST and Quattro presets. Requires PixInsight 1.9.5 and macOS 14 or later.</p>
+            <p>Native PCL Process. V1.6.4 fixes automatic Ha/SII/OIII/Hb wavelength initialization, embeds supplied presets, validates catalog responses, and includes network/privacy documentation and third-party licenses. Requires PixInsight 1.9.5 and macOS 14 or later.</p>
             <p>Installed under Process &gt; Convolution &gt; AstroDiffraction.</p>
          </description>
       </package>
@@ -25,4 +25,4 @@
       </package>
    </platform>
 </xri>
-<Signature developerId="Fluorine7" timestamp="2026-10-19T09:12:41.663Z" encoding="Base64">8c6RAu5Pw36MnHtIbO+qNS2O0fPcjltst4uCeG2lUeD3VfarJwjVViyfP6ySnRu1hEKSIW0KP0lZAvmnyPMBBA==</Signature>
+<Signature developerId="Fluorine7" timestamp="2026-10-19T10:01:22.492Z" encoding="Base64">91hLCaqORlPuWU8S1JgEhAAo5ZpEl7VAuo0gfu9sMYTfknFToJ7PkXmpx/Icw51rx0O3Z0TdnOsmRdzNDh65Bg==</Signature>
