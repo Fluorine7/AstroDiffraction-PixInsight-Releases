@@ -4,90 +4,110 @@
 
 ## 中文
 
-这里提供 AstroDiffraction 原生 PixInsight Process 的已签名安装包，适用于 PixInsight 1.9.5。**macOS 最新版为 V1.6.4**（模块内部版本 `1.6.4.0001`）；**Windows 暂时保留 V1.6.0**，V1.6.4 待编译后发布。
+这里提供 AstroDiffraction 原生 PixInsight Process 的安装包，适用于 PixInsight 1.9.5。
+**macOS 与 Windows 最新版均为 V1.7.1，模块内部版本 `1.7.1.0002`。**
+模块及更新索引使用 **Fluorine7 CPD 开发者身份**签名。
 
-### macOS V1.6.4 更新
+| 平台 | 安装包 |
+| --- | --- |
+| macOS 14 及以上，Apple Silicon | [下载 macOS 版](AstroDiffraction-1.7.1.0002-macos-arm64.zip) |
+| Windows x64 | [下载 Windows 版](AstroDiffraction-1.7.1.0002-windows-x64.zip) |
 
-- 修复打开工作台时，已从 FILTER 识别出的 Ha、SII、OIII、Hb 中心波长被默认参数覆盖回 550 nm 的问题。保留手动修改和已保存的非默认波长，FWHM 仍按实际滤镜带宽填写。
-- 将普通设置、JWST 蜂窝盖板和 quattro150 预设内嵌模块，升级后无需旁置预设资源。
-- 补充联网、隐私与文件保存说明，以及 PCL 致谢和第三方许可文本。
-- 加强 HTTPS 和星表响应校验，拒绝错误页、异常数值及截断响应；正式构建关闭开发诊断文件读写入口。
-- 包含 V1.6.3 的大图执行限制修复、极亮星核心黑点修复和星表选星后 100% 居中等改进。
+### 本次更新
 
-| 平台 | 版本 | 安装包 |
-| --- | --- | --- |
-| macOS 14 及以上，Apple Silicon | V1.6.4 | [下载 macOS 版](AstroDiffraction-1.6.4.0001-macos-arm64.zip) |
-| Windows x64 | V1.6.0（V1.6.4 待发布） | [下载 Windows 版](AstroDiffraction-1.6.0.0001-windows-x64.zip) |
+- 新增“亮星增宽”0–1 控制，零值关闭额外增宽并保留通量恢复；改善亮星响应、星表核心匹配和 L 滤镜/QE 数据传递。
+- 扩展亮星物理计算场，减少远端星芒被截断；重用光学核和积分结果，加快重复渲染。
+- 大型 FFT 在内存不足时使用系统临时目录中的计算暂存，保持采样与计算范围。32768 计算场约需 10.1 GiB 暂存空间，另预留 512 MiB；首次计算可能较慢。
+- 构建所用 zlib 与 Little CMS 已回移 CVE-2026-27171、CVE-2026-41254、CVE-2026-42798 的修复；不会由模块替换 PixInsight 核心或宿主库。
+- 加固用户预设的读写、1 MiB 大小限制和独占临时文件，保留用户已有预设。
+- 两个平台均附完整的中英用户说明、PCL 致谢、第三方许可及 PCL 内部算法版权声明。
 
 ### 安装
 
-推荐在 PixInsight 中通过更新仓库安装：
-
-1. 打开 **Resources → Updates → Manage Repositories**。
+1. 在 PixInsight 打开 **Resources → Updates → Manage Repositories**。
 2. 添加以下地址，保留末尾的 `/`：
 
    `https://raw.githubusercontent.com/Fluorine7/AstroDiffraction-PixInsight-Releases/main/`
 
-3. 运行 **Resources → Updates → Check for Updates**，安装更新并重启 PixInsight。
-4. 在 **Process → Convolution → AstroDiffraction** 中打开。
+3. 运行 **Resources → Updates → Check for Updates**，按标准流程安装并在方便时重启 PixInsight。
+4. 在 **Process → Convolution → AstroDiffraction** 打开模块。
 
-macOS V1.6.4 的 ZIP 将模块和匹配的 Fluorine7 开发者签名 `.xsgn` 放在 `bin/`，用户说明与许可放在 `doc/tools/AstroDiffraction/`。手动安装请遵循 PixInsight 的标准模块安装流程，并保留这些文档。`updates.xri` 仓库索引也已签名。目前没有 Linux 或 Intel Mac 安装包。
+手动安装请完整解压对应平台 ZIP，在 **Process → Modules → Install Modules** 中搜索解压包的 `bin/`。
+保留模块旁的 `.xsgn`，以及完整的 `doc/tools/AstroDiffraction/` 文档目录；可直接打开其中的
+`AstroDiffraction.html` 离线阅读帮助和许可。不要关闭签名检查。更新磁盘文件不会替换当前会话已经加载的模块。
+目前没有 Linux 或 Intel Mac 安装包。内置预设已经嵌入模块，无需旁置预设文件。
 
-Windows V1.6.0 的 ZIP 仍包含旁置的 `AstroDiffraction-presets.adpresets`，请将它与模块、签名一起保留。
+### 联网、隐私与文件
 
-### 联网、隐私与本地数据（macOS V1.6.4）
+“使用已解析的坐标（需要联网）”默认启用。执行检测，或在尚未检测时生成星芒，会按需通过 HTTPS 查询
+CDS/VizieR 的 Bright Star、Tycho-2 及补充 Gaia DR3；打开界面本身不查询。请求包含天区中心坐标、
+半径、字段、返回数量上限和星等条件。**不上传图像像素、文件名、本机路径、账号或设备序列号；没有开发者遥测或使用跟踪。**
+取消该选项后使用本地图像检测。服务及代理可见来源 IP 等常规连接信息，服务日志由 CDS 管理。
 
-“使用已解析的坐标（需要联网）”默认勾选。执行检测，或在尚未检测时生成星芒，会按需通过 HTTPS 向 `vizier.cds.unistra.fr` 的 CDS/VizieR 服务查询 Bright Star、Tycho-2 及补充 Gaia DR3 星表；打开界面本身不查询。请求包含天区中心坐标、搜索半径、字段、返回数量上限和星等条件。天区坐标可能反映拍摄对象。**不上传图像像素、文件名、本机路径、账号或设备序列号，也没有开发者遥测或使用跟踪。**取消勾选后使用本地图像检测。
+星表文本只在内存中处理，Gaia 缓存最多十分钟。HTTPS 验证服务器证书和主机名，响应有大小与结构/数值检查。
+用户预设文件 `AstroDiffraction-user.adpresets` 存放于 Windows 的 `%LOCALAPPDATA%\AstroDiffraction`
+或 macOS 的 `~/Library/Application Support/AstroDiffraction`，保存时在同一目录创建临时文件。
+低内存 FFT 暂存使用系统临时目录，完成、取消或异常时释放。光谱数据库只读；图像结果由用户通过 PixInsight 保存。
+模块不启动外部程序、不安装可执行代码、不请求管理员权限。详见包内用户说明。
 
-下载的星表文本仅在内存中处理，不保存到磁盘；补充 Gaia 结果在同一天区最多复用十分钟。服务及用户配置的代理会看到来源 IP 等常规连接信息，服务日志由 CDS 自行管理。连接验证服务器证书和主机名；响应有大小、星表身份、列顺序、单位、数值和结束标记等检查。详见安装包内的 `doc/tools/AstroDiffraction/AstroDiffraction.html`。
+### 验证范围
 
-用户自己的光学和渲染预设使用 `AstroDiffraction-user.adpresets`，存放在 Windows 的 `%LOCALAPPDATA%\AstroDiffraction` 或 macOS 的 `~/Library/Application Support/AstroDiffraction`。保存时在同一目录写入临时文件，再替换自己的预设文件。旧版 PCL Settings 预设可迁移，模块更新不覆盖用户文件。光谱数据库只读访问；图像结果通过 PixInsight 的保存功能写入文件。模块不启动外部程序，不请求管理员权限。
-
-**验证范围：**V1.6.4 已通过 macOS 编译及开发者签名验证。15 项相关回归测试覆盖波长初始化、星表校验、预设、打包、诊断隔离、大图尺寸和输出写回；诊断开关未改变测试图像的渲染像素。另使用三种真实 VizieR 响应验证格式兼容性。这些测试不替代完整的 PI 界面实测；Windows V1.6.4 编译和实机验证待执行。
+两个平台均已完成原生模块编译；Windows 的 36 项常规原生回归及 SDK CRC/LUT CVE 探针通过。
+本地 15 项相关检查覆盖打包、签名助手和亮星宽度；macOS SDK 探针结果复用本轮未变的补丁库验证。
+安装包检查覆盖版本、正式构建标记、两平台完整的文档与许可目录。当前版本的完整 PI 界面和用户图像效果验证仍待进行。
 
 ## English
 
-This repository distributes signed binaries of the native AstroDiffraction PixInsight Process for PixInsight 1.9.5. **The latest macOS release is V1.6.4** (internal version `1.6.4.0001`). **Windows remains at V1.6.0** until its V1.6.4 build is ready.
+AstroDiffraction is a native PixInsight Process for PixInsight 1.9.5.
+**Both macOS and Windows are now at V1.7.1, internal version `1.7.1.0002`.**
+The modules and update index are signed with the **Fluorine7 CPD identity**.
 
-### macOS V1.6.4 changes
+| Platform | Package |
+| --- | --- |
+| macOS 14 or later, Apple Silicon | [Download for macOS](AstroDiffraction-1.7.1.0002-macos-arm64.zip) |
+| Windows x64 | [Download for Windows](AstroDiffraction-1.7.1.0002-windows-x64.zip) |
 
-- Fixes default process import resetting an inferred Ha/SII/OIII/Hb wavelength to 550 nm when opening the workbench. Manual edits and saved nondefault wavelengths are preserved; enter the actual filter FWHM yourself.
-- Embeds supplied ordinary, JWST reticle and quattro150 presets in the module.
-- Includes network/privacy documentation, PCL acknowledgments and third-party licenses.
-- Strengthens authenticated HTTPS and catalog-response checks. Production builds disable development diagnostic file I/O.
-- Includes V1.6.3's large-image execution fix, bright-core display fix and 100% preview centring on star-table selection.
-
-| Platform | Version | Package |
-| --- | --- | --- |
-| macOS 14 or later, Apple Silicon | V1.6.4 | [Download for macOS](AstroDiffraction-1.6.4.0001-macos-arm64.zip) |
-| Windows x64 | V1.6.0 (V1.6.4 pending) | [Download for Windows](AstroDiffraction-1.6.0.0001-windows-x64.zip) |
+This release adds adjustable bright-star widening, improves catalog-core matching and L filter/QE transfer,
+extends the physical far field, reuses optical results, and provides bounded-memory FFT scratch storage.
+A 32768 field requires about 10.1 GiB of temporary disk space plus a 512 MiB reserve.
+Private SDK builds include upstream fixes for CVE-2026-27171, CVE-2026-41254 and CVE-2026-42798.
+Preset I/O uses bounded reads and exclusive temporary files. Both packages contain complete user documentation,
+PCL acknowledgments and third-party license notices.
 
 ### Installation
 
-1. Open **Resources → Updates → Manage Repositories**.
-2. Add the following URL, including the trailing `/`:
+Add the following URL under **Resources → Updates → Manage Repositories**, including the final `/`:
 
-   `https://raw.githubusercontent.com/Fluorine7/AstroDiffraction-PixInsight-Releases/main/`
+`https://raw.githubusercontent.com/Fluorine7/AstroDiffraction-PixInsight-Releases/main/`
 
-3. Run **Resources → Updates → Check for Updates**, install the update, and restart PixInsight.
-4. Open **Process → Convolution → AstroDiffraction**.
+Check for updates, install normally and restart PixInsight when convenient. Open
+**Process → Convolution → AstroDiffraction**. For manual installation, extract the entire ZIP and search
+its `bin/` directory in **Process → Modules → Install Modules**. Keep the adjacent `.xsgn` and the entire
+`doc/tools/AstroDiffraction/` tree; open its HTML file for offline help and licenses. Keep signature checks enabled.
+Linux and Intel Mac packages are not provided. Supplied presets are embedded.
 
-The macOS V1.6.4 ZIP places the module and matching Fluorine7 developer signature (`.xsgn`) under `bin/`, and user documentation and licenses under `doc/tools/AstroDiffraction/`. Follow PixInsight's standard module installation procedure for manual installation. Keep the documentation and module signature. The `updates.xri` index is also signed. Linux and Intel Mac packages are not available.
+### Network, storage and validation
 
-The Windows V1.6.0 package still uses an adjacent `AstroDiffraction-presets.adpresets`; keep it with its module and signature.
+The default solved-coordinate option queries CDS/VizieR over HTTPS on detection, or generation requiring detection.
+Requests include the solved field centre, radius, fields, row limit and magnitude filters. Opening the interface
+does not query catalogs. Image pixels, filenames, local paths, accounts and device serial numbers are not uploaded.
+There is no developer telemetry or usage tracking. Disable the option for local image detection. The service and
+any proxy see ordinary connection metadata such as the source IP.
 
-### Network, privacy and storage (macOS V1.6.4)
+Catalog text stays in memory, with a supplementary Gaia cache of up to ten minutes. Server certificates and hostnames,
+response size, table structure and numbers are checked. User presets use `%LOCALAPPDATA%\AstroDiffraction` on Windows
+or `~/Library/Application Support/AstroDiffraction` on macOS, with temporary files in the same directory. Low-memory
+FFT scratch uses the system temporary directory and is released on completion, cancellation or exceptions.
+The module launches no external programs, installs no executable code and requests no elevated privileges.
 
-The solved-coordinate option is enabled by default. Detection, or generation that needs detection, queries CDS/VizieR at `https://vizier.cds.unistra.fr/viz-bin/asu-tsv` for Bright Star, Tycho-2 and supplementary Gaia DR3. Opening the interface does not query catalogs. Requests contain the solved field centre, radius, requested fields, row limit and magnitude filters. A field position can reveal the photographed target. **Image pixels, filenames, local paths, account data and device serial numbers are not uploaded. There is no developer telemetry or usage tracking.** Disable the option for local image detection.
-
-Catalog text stays in memory; supplementary Gaia results may be reused for up to ten minutes. The service and any user-configured proxy see ordinary connection information such as the source IP; CDS controls its own service logs. Server certificates and hostnames are verified. Response size, catalog identity, column order, units, numeric ranges and complete table framing are checked. See the installed `doc/tools/AstroDiffraction/AstroDiffraction.html` for details.
-
-User presets and same-directory temporary files use `%LOCALAPPDATA%\AstroDiffraction` on Windows or `~/Library/Application Support/AstroDiffraction` on macOS. The file is `AstroDiffraction-user.adpresets`. Legacy PCL Settings presets migrate without replacing existing file entries. Updates preserve user presets. Spectral databases are read only; image results are saved with PixInsight's Save command. The module launches no external programs and requests no elevated privileges.
-
-**Validation scope:** macOS V1.6.4 passes compilation and developer-signature verification. Fifteen targeted regressions cover wavelength initialization, catalog validation, presets, packaging, diagnostic isolation, large-image geometry and output writeback. Diagnostic isolation preserves the rendered pixels of the test image. Three real VizieR responses pass format validation. Full PI GUI testing and Windows V1.6.4 hardware validation are not claimed.
+Both native modules compile successfully. The 36 standard Windows native checks and CRC/LUT CVE probe pass.
+Fifteen local checks cover packaging, the signing helper and bright-star width. Existing macOS SDK results are reused
+for unchanged patched libraries. Package checks cover versions, production markers and the full documentation tree.
+Full PI GUI and user-image validation for this build is still pending.
 
 ## Acknowledgments and licenses
 
 This product is based on software from the PixInsight project, developed by Pleiades Astrophoto and its contributors (https://pixinsight.com/).
 
-The macOS package includes complete license texts and `THIRD-PARTY-NOTICES.txt` under `doc/tools/AstroDiffraction/`. A CPD signature identifies the developer and verifies integrity; it is not Pleiades Astrophoto product approval or an endorsement.
+Both packages include `THIRD-PARTY-NOTICES.txt` and complete license texts under `doc/tools/AstroDiffraction/`.
+A CPD signature identifies the developer and verifies integrity; it is not Pleiades Astrophoto product approval or an endorsement.

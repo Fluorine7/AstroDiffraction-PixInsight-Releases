@@ -1,28 +1,25 @@
-<?xml version="1.0" encoding="UTF-8"?>
+<?xml version="1.0" encoding="utf-8"?>
 <xri version="1.0">
    <description>
-      <p>
-         <b>AstroDiffraction for PixInsight</b>
-      </p>
-      <p>Native diffraction-spike Process by Fluorine Zhu.</p>
+      <p>AstroDiffraction for PixInsight — native diffraction-spike Process by Fluorine Zhu.</p>
    </description>
    <platform os="macosx" arch="arm64" version="1.9.5:1.9.5">
-      <package fileName="AstroDiffraction-1.6.4.0001-macos-arm64.zip" sha1="54cbda6e8b4c8cfa7677fee5bc8fd3407e044ed2" type="module" releaseDate="20261019100122">
-         <title>AstroDiffraction V1.6.4 (macOS Apple Silicon)</title>
+      <package fileName="AstroDiffraction-1.7.1.0002-macos-arm64.zip" sha1="e09b89250064ebdb9e205775cde541e0cb484c98" type="module" releaseDate="20261022054844">
+         <title>AstroDiffraction V1.7.1 (macOS Apple Silicon)</title>
          <description>
-            <p>Native PCL Process. V1.6.4 fixes automatic Ha/SII/OIII/Hb wavelength initialization, embeds supplied presets, validates catalog responses, and includes network/privacy documentation and third-party licenses. Requires PixInsight 1.9.5 and macOS 14 or later.</p>
-            <p>Installed under Process &gt; Convolution &gt; AstroDiffraction.</p>
+            <p>Native PCL Process, build 1.7.1.0002. Adjustable bright-star widening, extended physical far fields, bounded-memory FFT scratch, optical-cache improvements, SDK security backports, hardened preset I/O, and complete user documentation and third-party licenses.</p>
+            <p>Installed under Process &gt; Convolution &gt; AstroDiffraction. Requires PixInsight 1.9.5 and macOS 14 or later.</p>
          </description>
       </package>
    </platform>
    <platform os="windows" arch="x64" version="1.9.5:1.9.5">
-      <package fileName="AstroDiffraction-1.6.0.0001-windows-x64.zip" sha1="c2547cf28c2e7b2f341687148161d364e0693fa4" type="module" releaseDate="20260930134742">
-         <title>AstroDiffraction V1.6.0 (Windows x64)</title>
+      <package fileName="AstroDiffraction-1.7.1.0002-windows-x64.zip" sha1="d464cf65fea8f8e95f8955bd1fb98781f0b01abb" type="module" releaseDate="20261022054844">
+         <title>AstroDiffraction V1.7.1 (Windows x64)</title>
          <description>
-            <p>Native PCL Process. V1.6.0 improves faint/bright spike response and catalog matching, hardens manual star edits, and defers unsolved-image prompts until explicit selection. Includes JWST and Quattro presets next to the module; user presets remain in the system user-data directory. Requires PixInsight 1.9.5 on Windows x64.</p>
-            <p>Installed under Process &gt; Convolution &gt; AstroDiffraction.</p>
+            <p>Native PCL Process, build 1.7.1.0002. Adjustable bright-star widening, extended physical far fields, bounded-memory FFT scratch, optical-cache improvements, SDK security backports, hardened preset I/O, and complete user documentation and third-party licenses.</p>
+            <p>Installed under Process &gt; Convolution &gt; AstroDiffraction. Requires PixInsight 1.9.5 on Windows x64.</p>
          </description>
       </package>
    </platform>
 </xri>
-<Signature developerId="Fluorine7" timestamp="2026-10-19T10:01:22.492Z" encoding="Base64">91hLCaqORlPuWU8S1JgEhAAo5ZpEl7VAuo0gfu9sMYTfknFToJ7PkXmpx/Icw51rx0O3Z0TdnOsmRdzNDh65Bg==</Signature>
+<Signature developerId="Fluorine7" timestamp="2026-10-22T05:49:06.813Z" encoding="Base64">mpSHIpG5j08m2eH+mik2d2yfVD2VCN1Cm6F3EVTt7Jsmh4A1dznvbFn0tC9c6DUzr1qr23PesfX7ajYeiibsBQ==</Signature>
