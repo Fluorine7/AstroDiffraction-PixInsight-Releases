@@ -13,13 +13,13 @@
       </package>
    </platform>
    <platform os="windows" arch="x64" version="1.9.5:1.9.5">
-      <package fileName="AstroDiffraction-1.7.1.0002-windows-x64-r2.zip" sha1="40d2c7b41ecb5d1a0cb63d701daa0d02a1951d4e" type="module" releaseDate="20261022085148">
-         <title>AstroDiffraction V1.7.1 (Windows x64, signature r2)</title>
+      <package fileName="AstroDiffraction-1.7.3.0001-windows-x64.zip" sha1="7b772f68db7c3dac0f8aa64205d8919d87ddbb5b" type="module" releaseDate="20261022154158">
+         <title>AstroDiffraction V1.7.3 (Windows x64)</title>
          <description>
-            <p>Signature revision r2: reissues the unchanged 1.7.1.0002 DLL with a separately generated Fluorine7 CPD signature, independently verified with the public key from Windows PixInsight. Replaces the original Windows package whose module signature was invalid.</p>
-            <p>Installed under Process &gt; Convolution &gt; AstroDiffraction. Requires PixInsight 1.9.5 on Windows x64.</p>
+            <p>Native PCL Process, build 1.7.3.0001. Fixes Retract Spikes leaving an applied AD step in image history. Retraction now restores the PixInsight history position; regeneration replaces the undone branch while preserving earlier processing. Guards against intervening image or history changes. Includes V1.7.2 large-kernel and far-field sampling precision and optical performance improvements, SDK security backports, complete user documentation and third-party licenses.</p>
+            <p>Compiled on Windows and separately signed on macOS with the Fluorine7 CPD identity. Installed under Process &gt; Convolution &gt; AstroDiffraction. Requires PixInsight 1.9.5 on Windows x64.</p>
          </description>
       </package>
    </platform>
 </xri>
-<Signature developerId="Fluorine7" timestamp="2026-10-22T12:26:05.931Z" encoding="Base64">hTbs8/a1qASUq0CJrsU60Epx9IKYxxy69GjcOuzgArthQlEkW0yyV/aVU7uUb4RVpZj7wvuN6cEvjFC8wf3sBg==</Signature>
+<Signature developerId="Fluorine7" timestamp="2026-10-22T15:42:20.294Z" encoding="Base64">N3LZeO83uPase1BJPsFwnMOVoHNsx22xLFfKXpywPvK6tgITy4txNdjPocX8PTOhSr/xopft5cGjI8AMDP5XDw==</Signature>

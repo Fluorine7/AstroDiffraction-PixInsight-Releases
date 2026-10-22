@@ -5,19 +5,19 @@
 ## 中文
 
 这里提供 AstroDiffraction 原生 PixInsight Process 的安装包，适用于 PixInsight 1.9.5。
-**macOS 最新版为 V1.7.3，模块内部版本 `1.7.3.0001`；Windows 保持 V1.7.1，内部版本 `1.7.1.0002`（签名修订 r2）。**
+**macOS 与 Windows 最新版均为 V1.7.3，模块内部版本 `1.7.3.0001`。**
 模块及更新索引使用 **Fluorine7 CPD 开发者身份**签名。
 
-**Windows 签名修订 r2：** 修复原 Windows 包的无效模块签名。DLL 内容及内部版本 `1.7.1.0002` 不变，已单独重签，并使用出错 Windows 的 CPD 公钥通过 SHA-512/Ed25519 验签。请下载下方带 `-r2` 的包或重新检查更新；旧失败包仅保留在归档中。
+**Windows V1.7.3：** 已在 Windows 构建机编译，拉回 Mac 后单独使用 Fluorine7 签名并验签。旧版有效的 1.7.1.0002 r2 包及原 DLL/签名已归档；首次发布的无效签名包继续单独保存在 `invalid-signature-r1/`，仅供追溯。
 
 旧版模块、匹配签名及原安装包保存在 [archive/](archive/)。更新索引只引用当前版本，PixInsight 更新不会下载归档；完整 Git 克隆仍包含它们。
 
 | 平台 | 安装包 |
 | --- | --- |
 | macOS 14 及以上，Apple Silicon | [下载 macOS 版](AstroDiffraction-1.7.3.0001-macos-arm64.zip) |
-| Windows x64 | [下载 Windows 版](AstroDiffraction-1.7.1.0002-windows-x64-r2.zip) |
+| Windows x64 | [下载 Windows 版](AstroDiffraction-1.7.3.0001-windows-x64.zip) |
 
-### 本次 macOS 更新 — V1.7.3
+### V1.7.3 — macOS 与 Windows
 
 - 修复“撤回星芒”只还原像素、却保留已应用 AD 历史的问题；现在同时恢复 PixInsight 的历史位置。
 - 撤回后仍可通过 PI“重做”恢复结果；再次生成会替换旧分支，已应用历史中只保留新的 AD 步骤，之前的其他处理不受影响。
@@ -28,12 +28,12 @@
 
 - 修复大核与远场的采样精度：所有物理远场层采用 2 倍强度采样、Lanczos-16 像元积分，并提前衔接标准场与远场，改善远端星芒轮廓及能量分布。
 - 用最多八个、受硬件和任务规模限制的工作线程加速首次光学计算，保持修正后的采样精度、双精度运算和计算范围。
-- 本机配对原生基准中，大核首次构建耗时减少约 36%，扩展远场探针首次渲染减少约 23%。基线是已修复精度的版本；这些数据不是相对 V1.7.1 的对比，也不代表所有机器或完整 PI 工作流的速度。
+- 此前 Mac 配对原生基准中，大核首次构建耗时减少约 36%，扩展远场探针首次渲染减少约 23%。基线是已修复精度的版本；这些数据不是相对 V1.7.1 的对比，也不代表 Windows、所有机器或完整 PI 工作流的速度。
 - 修复星表下载取消后继续请求的问题，加入请求时限，并加固测光数值边界。
 - 大型 FFT 继续使用系统临时目录控制内存。32768 入瞳网格采用 2 倍采样时，频谱暂存约需 16.1 GiB；若强度也写入磁盘则约需 24.1 GiB，另预留 512 MiB。
 - 保留此前的 SDK 安全回补、预设 I/O 加固及完整中英用户文档和第三方许可。
 
-Windows 的 r2 包继续提供 V1.7.1 功能和已修复的模块签名，本次未更新 Windows 二进制。
+本次补齐 Windows V1.7.3，包含上述历史修复及此前的采样、速度改进。macOS 安装包保持本次 Windows 发布前的原字节和签名。
 
 ### 安装
 
@@ -66,15 +66,15 @@ CDS/VizieR 的 Bright Star、Tycho-2 及补充 Gaia DR3；打开界面本身不�
 ### 验证范围
 
 macOS V1.7.3 已完成原生模块编译，打包／签名助手的 17 项检查通过。撤回逻辑的原生回归及生成的 PJSR 接口检查通过；在现有 PI 中对独立的 32 位灰度和 64 位 RGBA 图像验证了逐像素撤销／重做，以及再次生成后只有一条已应用 AD。运行中的已安装模块未被替换，因此尚未对 V1.7.3 工作台按钮完成整套 GUI 验证。光学算法未改动，沿用 V1.7.2 的采样与计算验证结果。模块使用 Fluorine7 CPD 签名，并通过 SHA-512/Ed25519 密码学验证；安装包检查覆盖内部版本、正式构建标记和全部文档许可。PI 官方接口对模块及更新索引的验签结果均为有效。
-Windows r2 复用原有已通过的编译、36 项常规原生回归及 SDK CRC/LUT CVE 探针结果。本次没有把 macOS 的优化或速度结论套用到 Windows。完整 PI 界面、用户图像效果验收和最高 32768 入瞳档完整渲染仍未完成。
+Windows V1.7.3 已在 VS 2022 x64 Release 下编译通过，39 项常规原生回归及 SDK CRC/LUT CVE 探针通过。首次测试遇到测试变量名与 Windows `far` 宏冲突，重命名该测试变量后从失败项继续，之前通过的 3 项结果复用；正式模块代码未因此改动。DLL 拉回 Mac 后单独签名，通过 SHA-512/Ed25519 验签；PI 官方接口对 Windows DLL 和此次 XRI 均返回有效的 Fluorine7 签名。安装包包含匹配的签名及全部 16 份用户文档／许可文件。Windows PI 内实际加载、完整界面与用户图像验收、最高 32768 入瞳档完整渲染仍未完成；未重新测量 Windows 速度或峰值内存。
 
 ## English
 
 AstroDiffraction is a native PixInsight Process for PixInsight 1.9.5.
-**macOS is now V1.7.3, internal version `1.7.3.0001`. Windows remains V1.7.1, internal version `1.7.1.0002` (signature revision r2).**
+**macOS and Windows are both V1.7.3, internal version `1.7.3.0001`.**
 The modules and update index are signed with the **Fluorine7 CPD identity**.
 
-**Windows signature revision r2:** fixes the invalid module signature in the original Windows package. The DLL bytes and internal version `1.7.1.0002` are unchanged. Its new signature was generated separately and passes SHA-512/Ed25519 verification with the affected Windows installation's CPD public key. Use the `-r2` package or check for updates again; the failed original package is retained only in the archive.
+**Windows V1.7.3:** compiled on the Windows build host, transferred to the Mac, and separately signed with the Fluorine7 identity. The signature is verified before packaging. The superseded valid 1.7.1.0002 r2 package and its original DLL/signature are archived; the invalid original signature remains separately labeled under `invalid-signature-r1/`.
 
 Superseded modules, matching signatures and original packages are kept in [archive/](archive/).
 PixInsight's updater downloads only the current packages listed in the update index; full Git clones include the archive.
@@ -82,9 +82,9 @@ PixInsight's updater downloads only the current packages listed in the update in
 | Platform | Package |
 | --- | --- |
 | macOS 14 or later, Apple Silicon | [Download for macOS](AstroDiffraction-1.7.3.0001-macos-arm64.zip) |
-| Windows x64 | [Download for Windows](AstroDiffraction-1.7.1.0002-windows-x64-r2.zip) |
+| Windows x64 | [Download for Windows](AstroDiffraction-1.7.3.0001-windows-x64.zip) |
 
-### macOS V1.7.3
+### V1.7.3 for macOS and Windows
 
 Fixes **撤回星芒** restoring pixels while leaving the AD step applied in PixInsight history.
 Retraction now restores the native history position. Redo remains available until new processing
@@ -99,13 +99,13 @@ detector integration. An earlier blend between standard and far fields improves 
 Up to eight bounded workers accelerate cold optical builds without changing the corrected sampling,
 double-precision arithmetic or field coverage. Paired native benchmarks on one Mac reduced large-kernel
 build time by about 36% and expanded far-field rendering time by about 23%, relative to the preceding
-high-accuracy source revision. These are not comparisons with V1.7.1 or full PixInsight workflow timings.
+high-accuracy source revision. These are Mac results, not Windows timings, comparisons with V1.7.1, or full PixInsight workflow timings.
 Catalog downloads now stop on cancellation and have total time limits; photometry bounds are hardened.
 
 With factor-2 sampling, a 32768 pupil grid requires about 16.1 GiB of spectrum scratch space,
 or 24.1 GiB if intensity also spills to disk, plus a 512 MiB reserve. SDK security backports,
 hardened preset I/O, complete user documentation and third-party notices are retained.
-The Windows r2 binary and its V1.7.1 functionality are unchanged in this release.
+Windows V1.7.3 now includes these optical changes and the history fix. The previously published macOS package retains its exact bytes and original signature.
 
 ### Installation
 
@@ -141,9 +141,14 @@ V1.7.3 workbench button remains pending. Unchanged optical code retains the V1.7
 The Fluorine7 module signature is verified with SHA-512/Ed25519; package checks cover the embedded
 version, production markers and complete documentation. The official PI APIs report valid Fluorine7
 signatures for the module and update index.
-The existing Windows compilation, 36 standard native checks and CRC/LUT CVE probe results still apply to
-its unchanged r2 package. macOS performance claims do not apply to that Windows binary.
-Full PI GUI/user-image validation and a complete render at the largest 32768 pupil tier remain pending.
+Windows V1.7.3 builds successfully with VS 2022 x64 Release; 39 standard native probes and the SDK
+CRC/LUT CVE probe pass. A test-only local variable collided with the Windows `far` macro; it was renamed
+and the suite resumed at that case, reusing the first three passing results. Production module code was
+unchanged by this test fix. The transferred DLL was signed separately on the Mac and verified with
+SHA-512/Ed25519. The official PI APIs report valid Fluorine7 signatures for the Windows DLL and this
+update index. The package contains its matching signature and all 16 documentation/license files.
+Loading this release inside Windows PI, full GUI/user-image validation and a complete render at the
+largest 32768 pupil tier remain pending. Windows speed and peak RAM were not rebenchmarked.
 
 ## Acknowledgments and licenses
 
