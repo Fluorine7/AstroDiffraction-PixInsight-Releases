@@ -4,11 +4,11 @@
       <p>AstroDiffraction for PixInsight — native diffraction-spike Process by Fluorine Zhu.</p>
    </description>
    <platform os="macosx" arch="arm64" version="1.9.5:1.9.5">
-      <package fileName="AstroDiffraction-1.7.3.0001-macos-arm64.zip" sha1="18080c736de8131466faa689eb45a75fc5db2b1d" type="module" releaseDate="20261022122551">
-         <title>AstroDiffraction V1.7.3 (macOS Apple Silicon)</title>
+      <package fileName="AstroDiffraction-1.7.4.0001-macos-arm64.zip" sha1="4f61124dfdb4f90c07d51eeab82d0f3de50f9a89" type="module" releaseDate="20261022161111">
+         <title>AstroDiffraction V1.7.4 (macOS Apple Silicon)</title>
          <description>
-            <p>Native PCL Process, build 1.7.3.0001. Fixes Retract Spikes leaving an applied AD step in image history. Retraction now restores the PixInsight history position; regeneration replaces the undone branch while preserving earlier processing. Guards against intervening image or history changes. Retains V1.7.2 sampling precision and optical performance improvements; includes complete user documentation and third-party licenses.</p>
-            <p>Installed under Process &gt; Convolution &gt; AstroDiffraction. Requires PixInsight 1.9.5 and macOS 14 or later.</p>
+            <p>Native PCL Process, build 1.7.4.0001. Adds a permanent framed reminder below the top command bar: use AstroDiffraction after color balance and BXT, before stretching, while the image is still linear. The reminder stays visible across parameter pages and scrolling, with bold key conditions and wrapping text.</p>
+            <p>Retains V1.7.3 history retraction and V1.7.2 sampling and performance improvements. Includes complete user documentation and third-party licenses. Installed under Process &gt; Convolution &gt; AstroDiffraction. Requires PixInsight 1.9.5 and macOS 14 or later.</p>
          </description>
       </package>
    </platform>
@@ -22,4 +22,4 @@
       </package>
    </platform>
 </xri>
-<Signature developerId="Fluorine7" timestamp="2026-10-22T15:42:20.294Z" encoding="Base64">N3LZeO83uPase1BJPsFwnMOVoHNsx22xLFfKXpywPvK6tgITy4txNdjPocX8PTOhSr/xopft5cGjI8AMDP5XDw==</Signature>
+<Signature developerId="Fluorine7" timestamp="2026-10-22T16:11:21.864Z" encoding="Base64">7g15mT5gDuenPrf9uP3EwRC8JaB7pZoleFygvIg2eJ96ULtsc9yRtnprnHThHgxKjJ/N0rjq1ayu1nf1F2T7AA==</Signature>
