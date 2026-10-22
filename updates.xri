@@ -4,10 +4,10 @@
       <p>AstroDiffraction for PixInsight — native diffraction-spike Process by Fluorine Zhu.</p>
    </description>
    <platform os="macosx" arch="arm64" version="1.9.5:1.9.5">
-      <package fileName="AstroDiffraction-1.7.2.0001-macos-arm64.zip" sha1="513bb76aa3ec5211604f6af90cef3ccd82bcf4b3" type="module" releaseDate="20261022114548">
-         <title>AstroDiffraction V1.7.2 (macOS Apple Silicon)</title>
+      <package fileName="AstroDiffraction-1.7.3.0001-macos-arm64.zip" sha1="18080c736de8131466faa689eb45a75fc5db2b1d" type="module" releaseDate="20261022122551">
+         <title>AstroDiffraction V1.7.3 (macOS Apple Silicon)</title>
          <description>
-            <p>Native PCL Process, build 1.7.2.0001. Improves large-kernel and far-field sampling with factor-2 intensity grids, Lanczos-16 detector integration and an earlier blend between fields. Accelerates first optical builds with bounded parallelism while preserving the corrected sampling precision. Fixes catalog cancellation and photometry bounds; includes complete user documentation and third-party licenses.</p>
+            <p>Native PCL Process, build 1.7.3.0001. Fixes Retract Spikes leaving an applied AD step in image history. Retraction now restores the PixInsight history position; regeneration replaces the undone branch while preserving earlier processing. Guards against intervening image or history changes. Retains V1.7.2 sampling precision and optical performance improvements; includes complete user documentation and third-party licenses.</p>
             <p>Installed under Process &gt; Convolution &gt; AstroDiffraction. Requires PixInsight 1.9.5 and macOS 14 or later.</p>
          </description>
       </package>
@@ -22,4 +22,4 @@
       </package>
    </platform>
 </xri>
-<Signature developerId="Fluorine7" timestamp="2026-10-22T11:46:14.205Z" encoding="Base64">mb0ltQ7NSu/CULO1yqlaWTsPJt81NndRz/oUfFe9hxvvrvRpC2/HtTd0jDO64FPUFzmpnFwmh44Vis5a40JGDg==</Signature>
+<Signature developerId="Fluorine7" timestamp="2026-10-22T12:26:05.931Z" encoding="Base64">hTbs8/a1qASUq0CJrsU60Epx9IKYxxy69GjcOuzgArthQlEkW0yyV/aVU7uUb4RVpZj7wvuN6cEvjFC8wf3sBg==</Signature>
