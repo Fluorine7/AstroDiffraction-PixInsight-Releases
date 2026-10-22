@@ -13,13 +13,13 @@
       </package>
    </platform>
    <platform os="windows" arch="x64" version="1.9.5:1.9.5">
-      <package fileName="AstroDiffraction-1.7.3.0001-windows-x64.zip" sha1="7b772f68db7c3dac0f8aa64205d8919d87ddbb5b" type="module" releaseDate="20261022154158">
-         <title>AstroDiffraction V1.7.3 (Windows x64)</title>
+      <package fileName="AstroDiffraction-1.7.4.0001-windows-x64.zip" sha1="c10cfbf2c8cd9adf03e6765cf83090eec00976ff" type="module" releaseDate="20261022162744">
+         <title>AstroDiffraction V1.7.4 (Windows x64)</title>
          <description>
-            <p>Native PCL Process, build 1.7.3.0001. Fixes Retract Spikes leaving an applied AD step in image history. Retraction now restores the PixInsight history position; regeneration replaces the undone branch while preserving earlier processing. Guards against intervening image or history changes. Includes V1.7.2 large-kernel and far-field sampling precision and optical performance improvements, SDK security backports, complete user documentation and third-party licenses.</p>
-            <p>Compiled on Windows and separately signed on macOS with the Fluorine7 CPD identity. Installed under Process &gt; Convolution &gt; AstroDiffraction. Requires PixInsight 1.9.5 on Windows x64.</p>
+            <p>Native PCL Process, build 1.7.4.0001. Adds a permanent framed reminder below the top command bar: use AstroDiffraction after color balance and BXT, before stretching, while the image is still linear. The reminder stays visible across parameter pages and scrolling, with bold key conditions and wrapping text.</p>
+            <p>Compiled on Windows and separately signed on macOS with the Fluorine7 CPD identity. Retains V1.7.3 history retraction and V1.7.2 sampling and performance improvements. Includes complete user documentation and third-party licenses. Installed under Process &gt; Convolution &gt; AstroDiffraction. Requires PixInsight 1.9.5 on Windows x64.</p>
          </description>
       </package>
    </platform>
 </xri>
-<Signature developerId="Fluorine7" timestamp="2026-10-22T16:11:21.864Z" encoding="Base64">7g15mT5gDuenPrf9uP3EwRC8JaB7pZoleFygvIg2eJ96ULtsc9yRtnprnHThHgxKjJ/N0rjq1ayu1nf1F2T7AA==</Signature>
+<Signature developerId="Fluorine7" timestamp="2026-10-22T16:28:05.389Z" encoding="Base64">Ih74tPKQRS4MQlk0nGB8zmrthq7UkFJpfPKAdtNSEEhrDzI8/HUtXtRl+7M1m8u1voahdhhACCJQvClqNt34CA==</Signature>
