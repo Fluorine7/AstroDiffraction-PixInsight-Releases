@@ -8,12 +8,14 @@
 **macOS 与 Windows 最新版均为 V1.7.1，模块内部版本 `1.7.1.0002`。**
 模块及更新索引使用 **Fluorine7 CPD 开发者身份**签名。
 
+**Windows 签名修订 r2：** 修复原 Windows 包的无效模块签名。DLL 内容及内部版本 `1.7.1.0002` 不变，已单独重签，并使用出错 Windows 的 CPD 公钥通过 SHA-512/Ed25519 验签。请下载下方带 `-r2` 的包或重新检查更新；旧失败包仅保留在归档中。
+
 旧版模块、匹配签名及原安装包保存在 [archive/](archive/)。更新索引只引用当前版本，PixInsight 更新不会下载归档；完整 Git 克隆仍包含它们。
 
 | 平台 | 安装包 |
 | --- | --- |
 | macOS 14 及以上，Apple Silicon | [下载 macOS 版](AstroDiffraction-1.7.1.0002-macos-arm64.zip) |
-| Windows x64 | [下载 Windows 版](AstroDiffraction-1.7.1.0002-windows-x64.zip) |
+| Windows x64 | [下载 Windows 版](AstroDiffraction-1.7.1.0002-windows-x64-r2.zip) |
 
 ### 本次更新
 
@@ -64,13 +66,15 @@ AstroDiffraction is a native PixInsight Process for PixInsight 1.9.5.
 **Both macOS and Windows are now at V1.7.1, internal version `1.7.1.0002`.**
 The modules and update index are signed with the **Fluorine7 CPD identity**.
 
+**Windows signature revision r2:** fixes the invalid module signature in the original Windows package. The DLL bytes and internal version `1.7.1.0002` are unchanged. Its new signature was generated separately and passes SHA-512/Ed25519 verification with the affected Windows installation's CPD public key. Use the `-r2` package or check for updates again; the failed original package is retained only in the archive.
+
 Superseded modules, matching signatures and original packages are kept in [archive/](archive/).
 PixInsight's updater downloads only the current packages listed in the update index; full Git clones include the archive.
 
 | Platform | Package |
 | --- | --- |
 | macOS 14 or later, Apple Silicon | [Download for macOS](AstroDiffraction-1.7.1.0002-macos-arm64.zip) |
-| Windows x64 | [Download for Windows](AstroDiffraction-1.7.1.0002-windows-x64.zip) |
+| Windows x64 | [Download for Windows](AstroDiffraction-1.7.1.0002-windows-x64-r2.zip) |
 
 This release adds adjustable bright-star widening, improves catalog-core matching and L filter/QE transfer,
 extends the physical far field, reuses optical results, and provides bounded-memory FFT scratch storage.

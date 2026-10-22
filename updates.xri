@@ -13,13 +13,13 @@
       </package>
    </platform>
    <platform os="windows" arch="x64" version="1.9.5:1.9.5">
-      <package fileName="AstroDiffraction-1.7.1.0002-windows-x64.zip" sha1="d464cf65fea8f8e95f8955bd1fb98781f0b01abb" type="module" releaseDate="20261022054844">
-         <title>AstroDiffraction V1.7.1 (Windows x64)</title>
+      <package fileName="AstroDiffraction-1.7.1.0002-windows-x64-r2.zip" sha1="40d2c7b41ecb5d1a0cb63d701daa0d02a1951d4e" type="module" releaseDate="20261022085148">
+         <title>AstroDiffraction V1.7.1 (Windows x64, signature r2)</title>
          <description>
-            <p>Native PCL Process, build 1.7.1.0002. Adjustable bright-star widening, extended physical far fields, bounded-memory FFT scratch, optical-cache improvements, SDK security backports, hardened preset I/O, and complete user documentation and third-party licenses.</p>
+            <p>Signature revision r2: reissues the unchanged 1.7.1.0002 DLL with a separately generated Fluorine7 CPD signature, independently verified with the public key from Windows PixInsight. Replaces the original Windows package whose module signature was invalid.</p>
             <p>Installed under Process &gt; Convolution &gt; AstroDiffraction. Requires PixInsight 1.9.5 on Windows x64.</p>
          </description>
       </package>
    </platform>
 </xri>
-<Signature developerId="Fluorine7" timestamp="2026-10-22T05:49:06.813Z" encoding="Base64">mpSHIpG5j08m2eH+mik2d2yfVD2VCN1Cm6F3EVTt7Jsmh4A1dznvbFn0tC9c6DUzr1qr23PesfX7ajYeiibsBQ==</Signature>
+<Signature developerId="Fluorine7" timestamp="2026-10-22T08:54:16.235Z" encoding="Base64">POIQ6+1oz5ZkBCjtGuSYAdDEL2HBC3Yh8mfThdplh6Xh7DTVgZynf6jYA20maUYjKTwarTfK0Y4fEH+/UUtJBw==</Signature>
