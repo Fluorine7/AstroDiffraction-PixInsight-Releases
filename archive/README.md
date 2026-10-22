@@ -9,8 +9,9 @@ archive/<模块内部版本>/<平台>/
   AstroDiffraction-<版本>-<平台>.zip
 ```
 
-当前补归档的历史正式发布：
+当前归档的历史发布：
 
+- [macOS arm64 1.7.1.0002](1.7.1.0002/macos-arm64/)
 - [macOS arm64 1.6.4.0001](1.6.4.0001/macos-arm64/)
 - [Windows x64 1.6.0.0001](1.6.0.0001/windows-x64/)
 - [Windows 1.7.1.0002 首次发布（无效签名，仅供追溯）](1.7.1.0002/windows-x64/invalid-signature-r1/)

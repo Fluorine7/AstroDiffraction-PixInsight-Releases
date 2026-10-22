@@ -5,7 +5,7 @@
 ## 中文
 
 这里提供 AstroDiffraction 原生 PixInsight Process 的安装包，适用于 PixInsight 1.9.5。
-**macOS 与 Windows 最新版均为 V1.7.1，模块内部版本 `1.7.1.0002`。**
+**macOS 最新版为 V1.7.2，模块内部版本 `1.7.2.0001`；Windows 保持 V1.7.1，内部版本 `1.7.1.0002`（签名修订 r2）。**
 模块及更新索引使用 **Fluorine7 CPD 开发者身份**签名。
 
 **Windows 签名修订 r2：** 修复原 Windows 包的无效模块签名。DLL 内容及内部版本 `1.7.1.0002` 不变，已单独重签，并使用出错 Windows 的 CPD 公钥通过 SHA-512/Ed25519 验签。请下载下方带 `-r2` 的包或重新检查更新；旧失败包仅保留在归档中。
@@ -14,17 +14,19 @@
 
 | 平台 | 安装包 |
 | --- | --- |
-| macOS 14 及以上，Apple Silicon | [下载 macOS 版](AstroDiffraction-1.7.1.0002-macos-arm64.zip) |
+| macOS 14 及以上，Apple Silicon | [下载 macOS 版](AstroDiffraction-1.7.2.0001-macos-arm64.zip) |
 | Windows x64 | [下载 Windows 版](AstroDiffraction-1.7.1.0002-windows-x64-r2.zip) |
 
-### 本次更新
+### 本次 macOS 更新 — V1.7.2
 
-- 新增“亮星增宽”0–1 控制，零值关闭额外增宽并保留通量恢复；改善亮星响应、星表核心匹配和 L 滤镜/QE 数据传递。
-- 扩展亮星物理计算场，减少远端星芒被截断；重用光学核和积分结果，加快重复渲染。
-- 大型 FFT 在内存不足时使用系统临时目录中的计算暂存，保持采样与计算范围。32768 计算场约需 10.1 GiB 暂存空间，另预留 512 MiB；首次计算可能较慢。
-- 构建所用 zlib 与 Little CMS 已回移 CVE-2026-27171、CVE-2026-41254、CVE-2026-42798 的修复；不会由模块替换 PixInsight 核心或宿主库。
-- 加固用户预设的读写、1 MiB 大小限制和独占临时文件，保留用户已有预设。
-- 两个平台均附完整的中英用户说明、PCL 致谢、第三方许可及 PCL 内部算法版权声明。
+- 修复大核与远场的采样精度：所有物理远场层采用 2 倍强度采样、Lanczos-16 像元积分，并提前衔接标准场与远场，改善远端星芒轮廓及能量分布。
+- 用最多八个、受硬件和任务规模限制的工作线程加速首次光学计算，保持修正后的采样精度、双精度运算和计算范围。
+- 本机配对原生基准中，大核首次构建耗时减少约 36%，扩展远场探针首次渲染减少约 23%。基线是已修复精度的版本；这些数据不是相对 V1.7.1 的对比，也不代表所有机器或完整 PI 工作流的速度。
+- 修复星表下载取消后继续请求的问题，加入请求时限，并加固测光数值边界。
+- 大型 FFT 继续使用系统临时目录控制内存。32768 入瞳网格采用 2 倍采样时，频谱暂存约需 16.1 GiB；若强度也写入磁盘则约需 24.1 GiB，另预留 512 MiB。
+- 保留此前的 SDK 安全回补、预设 I/O 加固及完整中英用户文档和第三方许可。
+
+Windows 的 r2 包继续提供 V1.7.1 功能和已修复的模块签名，本次未更新 Windows 二进制。
 
 ### 安装
 
@@ -56,14 +58,13 @@ CDS/VizieR 的 Bright Star、Tycho-2 及补充 Gaia DR3；打开界面本身不�
 
 ### 验证范围
 
-两个平台均已完成原生模块编译；Windows 的 36 项常规原生回归及 SDK CRC/LUT CVE 探针通过。
-本地 15 项相关检查覆盖打包、签名助手和亮星宽度；macOS SDK 探针结果复用本轮未变的补丁库验证。
-安装包检查覆盖版本、正式构建标记、两平台完整的文档与许可目录。当前版本的完整 PI 界面和用户图像效果验证仍待进行。
+macOS V1.7.2 已完成原生模块编译和 17 项打包／签名助手检查；复用本次代码定版前已通过的 32 项相关回归、采样精度参考及完整光学核一致性结果。模块使用 Fluorine7 CPD 签名，并进行 SHA-512/Ed25519 密码学验证；安装包检查覆盖内部版本、正式构建标记和全部文档许可。PI 官方接口对模块及更新索引的验签结果均为有效。
+Windows r2 复用原有已通过的编译、36 项常规原生回归及 SDK CRC/LUT CVE 探针结果。本次没有把 macOS 的优化或速度结论套用到 Windows。完整 PI 界面、用户图像效果验收和最高 32768 入瞳档完整渲染仍未完成。
 
 ## English
 
 AstroDiffraction is a native PixInsight Process for PixInsight 1.9.5.
-**Both macOS and Windows are now at V1.7.1, internal version `1.7.1.0002`.**
+**macOS is now V1.7.2, internal version `1.7.2.0001`. Windows remains V1.7.1, internal version `1.7.1.0002` (signature revision r2).**
 The modules and update index are signed with the **Fluorine7 CPD identity**.
 
 **Windows signature revision r2:** fixes the invalid module signature in the original Windows package. The DLL bytes and internal version `1.7.1.0002` are unchanged. Its new signature was generated separately and passes SHA-512/Ed25519 verification with the affected Windows installation's CPD public key. Use the `-r2` package or check for updates again; the failed original package is retained only in the archive.
@@ -73,15 +74,23 @@ PixInsight's updater downloads only the current packages listed in the update in
 
 | Platform | Package |
 | --- | --- |
-| macOS 14 or later, Apple Silicon | [Download for macOS](AstroDiffraction-1.7.1.0002-macos-arm64.zip) |
+| macOS 14 or later, Apple Silicon | [Download for macOS](AstroDiffraction-1.7.2.0001-macos-arm64.zip) |
 | Windows x64 | [Download for Windows](AstroDiffraction-1.7.1.0002-windows-x64-r2.zip) |
 
-This release adds adjustable bright-star widening, improves catalog-core matching and L filter/QE transfer,
-extends the physical far field, reuses optical results, and provides bounded-memory FFT scratch storage.
-A 32768 field requires about 10.1 GiB of temporary disk space plus a 512 MiB reserve.
-Private SDK builds include upstream fixes for CVE-2026-27171, CVE-2026-41254 and CVE-2026-42798.
-Preset I/O uses bounded reads and exclusive temporary files. Both packages contain complete user documentation,
-PCL acknowledgments and third-party license notices.
+### macOS V1.7.2
+
+Large kernels and every physical far-field tier now use factor-2 intensity sampling and Lanczos-16
+detector integration. An earlier blend between standard and far fields improves outer-wing accuracy.
+Up to eight bounded workers accelerate cold optical builds without changing the corrected sampling,
+double-precision arithmetic or field coverage. Paired native benchmarks on one Mac reduced large-kernel
+build time by about 36% and expanded far-field rendering time by about 23%, relative to the preceding
+high-accuracy source revision. These are not comparisons with V1.7.1 or full PixInsight workflow timings.
+Catalog downloads now stop on cancellation and have total time limits; photometry bounds are hardened.
+
+With factor-2 sampling, a 32768 pupil grid requires about 16.1 GiB of spectrum scratch space,
+or 24.1 GiB if intensity also spills to disk, plus a 512 MiB reserve. SDK security backports,
+hardened preset I/O, complete user documentation and third-party notices are retained.
+The Windows r2 binary and its V1.7.1 functionality are unchanged in this release.
 
 ### Installation
 
@@ -109,10 +118,14 @@ or `~/Library/Application Support/AstroDiffraction` on macOS, with temporary fil
 FFT scratch uses the system temporary directory and is released on completion, cancellation or exceptions.
 The module launches no external programs, installs no executable code and requests no elevated privileges.
 
-Both native modules compile successfully. The 36 standard Windows native checks and CRC/LUT CVE probe pass.
-Fifteen local checks cover packaging, the signing helper and bright-star width. Existing macOS SDK results are reused
-for unchanged patched libraries. Package checks cover versions, production markers and the full documentation tree.
-Full PI GUI and user-image validation for this build is still pending.
+The macOS V1.7.2 module compiles successfully and passes 17 packaging/signing-helper checks.
+The 32 relevant regressions, independent sampling references and full-kernel equality results from the
+unchanged final optical source are reused. The Fluorine7 module signature is verified with SHA-512/Ed25519;
+package checks cover its embedded version, production markers and complete documentation tree.
+The official PI APIs report valid Fluorine7 signatures for both the module and update index.
+The existing Windows compilation, 36 standard native checks and CRC/LUT CVE probe results still apply to
+its unchanged r2 package. macOS performance claims do not apply to that Windows binary.
+Full PI GUI/user-image validation and a complete render at the largest 32768 pupil tier remain pending.
 
 ## Acknowledgments and licenses
 

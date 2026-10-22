@@ -4,10 +4,10 @@
       <p>AstroDiffraction for PixInsight — native diffraction-spike Process by Fluorine Zhu.</p>
    </description>
    <platform os="macosx" arch="arm64" version="1.9.5:1.9.5">
-      <package fileName="AstroDiffraction-1.7.1.0002-macos-arm64.zip" sha1="e09b89250064ebdb9e205775cde541e0cb484c98" type="module" releaseDate="20261022054844">
-         <title>AstroDiffraction V1.7.1 (macOS Apple Silicon)</title>
+      <package fileName="AstroDiffraction-1.7.2.0001-macos-arm64.zip" sha1="513bb76aa3ec5211604f6af90cef3ccd82bcf4b3" type="module" releaseDate="20261022114548">
+         <title>AstroDiffraction V1.7.2 (macOS Apple Silicon)</title>
          <description>
-            <p>Native PCL Process, build 1.7.1.0002. Adjustable bright-star widening, extended physical far fields, bounded-memory FFT scratch, optical-cache improvements, SDK security backports, hardened preset I/O, and complete user documentation and third-party licenses.</p>
+            <p>Native PCL Process, build 1.7.2.0001. Improves large-kernel and far-field sampling with factor-2 intensity grids, Lanczos-16 detector integration and an earlier blend between fields. Accelerates first optical builds with bounded parallelism while preserving the corrected sampling precision. Fixes catalog cancellation and photometry bounds; includes complete user documentation and third-party licenses.</p>
             <p>Installed under Process &gt; Convolution &gt; AstroDiffraction. Requires PixInsight 1.9.5 and macOS 14 or later.</p>
          </description>
       </package>
@@ -22,4 +22,4 @@
       </package>
    </platform>
 </xri>
-<Signature developerId="Fluorine7" timestamp="2026-10-22T08:54:16.235Z" encoding="Base64">POIQ6+1oz5ZkBCjtGuSYAdDEL2HBC3Yh8mfThdplh6Xh7DTVgZynf6jYA20maUYjKTwarTfK0Y4fEH+/UUtJBw==</Signature>
+<Signature developerId="Fluorine7" timestamp="2026-10-22T11:46:14.205Z" encoding="Base64">mb0ltQ7NSu/CULO1yqlaWTsPJt81NndRz/oUfFe9hxvvrvRpC2/HtTd0jDO64FPUFzmpnFwmh44Vis5a40JGDg==</Signature>
