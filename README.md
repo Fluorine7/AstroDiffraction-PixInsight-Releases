@@ -8,6 +8,8 @@
 **macOS 与 Windows 最新版均为 V1.7.1，模块内部版本 `1.7.1.0002`。**
 模块及更新索引使用 **Fluorine7 CPD 开发者身份**签名。
 
+旧版模块、匹配签名及原安装包保存在 [archive/](archive/)。更新索引只引用当前版本，PixInsight 更新不会下载归档；完整 Git 克隆仍包含它们。
+
 | 平台 | 安装包 |
 | --- | --- |
 | macOS 14 及以上，Apple Silicon | [下载 macOS 版](AstroDiffraction-1.7.1.0002-macos-arm64.zip) |
@@ -61,6 +63,9 @@ CDS/VizieR 的 Bright Star、Tycho-2 及补充 Gaia DR3；打开界面本身不�
 AstroDiffraction is a native PixInsight Process for PixInsight 1.9.5.
 **Both macOS and Windows are now at V1.7.1, internal version `1.7.1.0002`.**
 The modules and update index are signed with the **Fluorine7 CPD identity**.
+
+Superseded modules, matching signatures and original packages are kept in [archive/](archive/).
+PixInsight's updater downloads only the current packages listed in the update index; full Git clones include the archive.
 
 | Platform | Package |
 | --- | --- |
